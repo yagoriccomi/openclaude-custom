@@ -1,0 +1,2 @@
+# Script de shell precisa de LF, senão o Git Bash quebra.
+bin/openclaude text eol=lf

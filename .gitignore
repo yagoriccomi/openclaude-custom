@@ -1,0 +1,19 @@
+# Lista de permissão: só entra no git o que for liberado abaixo.
+# Credenciais, histórico, sessões e caches ficam de fora por padrão.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/CLAUDE.md
+!/settings.json
+!/openclaude.ico
+!/bin/
+!/patches/
+/patches/*
+!/patches/aplicar-patches.js
+!/proxy/
+/proxy/*
+!/proxy/router-proxy.js
+!/proxy/test-fallback.js
+!/proxy/start-proxy-hidden.vbs
+!/proxy/launch-openclaude.bat

@@ -1,0 +1,46 @@
+{
+  "env": {
+    "CLAUDE_CODE_ALWAYS_ENABLE_EFFORT": "1"
+  },
+  "effortLevel": "medium",
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Agent",
+      "AskUserQuestion",
+      "Bash",
+      "Edit",
+      "EnterPlanMode",
+      "EnterWorktree",
+      "ExitPlanMode",
+      "ExitWorktree",
+      "Glob",
+      "Grep",
+      "ListMcpResourcesTool",
+      "NotebookEdit",
+      "Read",
+      "ReadMcpResourceTool",
+      "Skill",
+      "TaskCreate",
+      "TaskGet",
+      "TaskList",
+      "TaskOutput",
+      "TaskStop",
+      "TaskUpdate",
+      "TodoWrite",
+      "WebFetch",
+      "WebSearch",
+      "Write",
+      "mcp__arcgis-pro"
+    ]
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "supabase@claude-plugins-official": true,
+    "plugin-dev@claude-plugins-official": true
+  },
+  "language": "Português"
+}
