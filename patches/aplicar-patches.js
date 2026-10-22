@@ -12,7 +12,12 @@
 const fs = require("fs");
 const path = require("path");
 
-const PKG_DIR = path.join(process.env.APPDATA || "", "npm", "node_modules", "@gitlawb", "openclaude");
+// O pacote mudou de @gitlawb para @twigpine em 2026-10; aceita os dois.
+const PKG_DIR =
+  ["@twigpine", "@gitlawb"]
+    .map((scope) => path.join(process.env.APPDATA || "", "npm", "node_modules", scope, "openclaude"))
+    .find((dir) => fs.existsSync(path.join(dir, "dist", "cli.mjs"))) ||
+  path.join(process.env.APPDATA || "", "npm", "node_modules", "@twigpine", "openclaude");
 const CLI = path.join(PKG_DIR, "dist", "cli.mjs");
 const STATE = path.join(__dirname, ".state.json");
 const auto = process.argv.includes("--auto");
