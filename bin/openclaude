@@ -1,9 +1,5 @@
 #!/bin/sh
-# Liga o proxy local (127.0.0.1:8788) se estiver desligado e abre o OpenClaude do npm.
-if ! (exec 3<>/dev/tcp/127.0.0.1/8788) 2>/dev/null; then
-  wscript.exe "$(cygpath -w "$HOME/.openclaude/proxy/start-proxy-hidden.vbs")"
-  sleep 1.2
-fi
+# Abre o OpenClaude do npm. O proxy agora roda no servidor (https://9router.yagoriccomi.com.br/v1).
 # Reaplica os patches locais se o OpenClaude foi atualizado (rapido quando nada mudou).
 node "$HOME/.openclaude/patches/aplicar-patches.js" --auto
 exec "$APPDATA/npm/openclaude" "$@"
