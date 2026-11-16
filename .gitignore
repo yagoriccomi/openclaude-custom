@@ -11,6 +11,7 @@
 !/patches/
 /patches/*
 !/patches/aplicar-patches.js
+!/patches/traducao-ptbr.js
 !/proxy/
 /proxy/*
 !/proxy/router-proxy.js

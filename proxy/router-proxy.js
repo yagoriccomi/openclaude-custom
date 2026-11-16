@@ -1,4 +1,4 @@
-// Local loopback proxy: 127.0.0.1:<PORT> -> https://escritorio.taile8f97b.ts.net
+// Local loopback proxy: 127.0.0.1:<PORT> -> https://9router.yagoriccomi.com.br
 //
 // 1) Gives OpenClaude a localhost URL so its /model auto-discovery works.
 // 2) For cc/* (Claude) models, translates OpenAI /chat/completions requests into the
@@ -10,7 +10,7 @@ const http = require("http");
 const https = require("https");
 
 const PORT = 8788;
-const UPSTREAM_HOST = "escritorio.taile8f97b.ts.net";
+const UPSTREAM_HOST = "9router.yagoriccomi.com.br";
 const DEFAULT_MAX_TOKENS = 32000;
 
 function forward(req, res, body) {
@@ -46,7 +46,6 @@ const FALLBACK_CHAIN = [
   "cc/claude-fable-5-1",
   "cc/claude-fable-5",
   "cc/claude-opus-5-5",
-  "cc/claude-opus-5",
   "cc/claude-sonnet-5-5",
   "cc/claude-sonnet-5",
   "cc/claude-haiku-4-5-20251001",

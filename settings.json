@@ -1,10 +1,11 @@
 {
   "env": {
-    "CLAUDE_CODE_ALWAYS_ENABLE_EFFORT": "1"
+    "CLAUDE_CODE_ALWAYS_ENABLE_EFFORT": "1",
+    "OPENCLAUDE_QUERY_IDLE_TIMEOUT_MS": "3600000",
+    "OPENCLAUDE_QUERY_HARD_MAX_MS": "7200000",
+    "CLAUDE_STREAM_IDLE_TIMEOUT_MS": "1800000"
   },
-  "effortLevel": "medium",
   "permissions": {
-    "defaultMode": "dontAsk",
     "allow": [
       "Agent",
       "AskUserQuestion",
@@ -32,15 +33,36 @@
       "WebSearch",
       "Write",
       "mcp__arcgis-pro"
-    ]
+    ],
+    "defaultMode": "bypassPermissions"
   },
+  "model": "cx/gpt-6-astra[1m]",
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
     "claude-code-setup@claude-plugins-official": true,
     "supabase@claude-plugins-official": true,
-    "plugin-dev@claude-plugins-official": true
+    "plugin-dev@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "context-mode@context-mode": true,
+    "caveman@caveman": true
   },
-  "language": "Português"
+  "extraKnownMarketplaces": {
+    "context-mode": {
+      "source": {
+        "source": "github",
+        "repo": "mksglu/context-mode"
+      }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    }
+  },
+  "language": "Português",
+  "skipDangerousModePermissionPrompt": true,
+  "skipFullAccessModePermissionPrompt": true
 }
